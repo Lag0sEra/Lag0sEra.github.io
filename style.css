@@ -58,3 +58,7 @@ footer {
   margin-top: 40px;
   color: #777;
 }
+
+h1 {
+  font-style: italic;
+}
