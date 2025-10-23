@@ -13,10 +13,7 @@ body {
   padding: 20px;
 
   background-image: url('https://img1.picmix.com/output/stamp/normal/8/8/0/4/2554088_51e77.gif');
-  background-size: cover;  
-  height: 100vh;
-  padding:0;
-  margin:0;
+  background-size: cover;
   
   text-align:center;
   max-width: 90%;
