@@ -2,10 +2,10 @@
 body{
     background-image: url('https://raw.githubusercontent.com/Lag0sEra/Lag0sEra.github.io/refs/heads/main/Websiteshits/BG/TransBG.gif');
     background-size: cover;
-    height: 100vh;
-  
-    padding:75;
-    margin:center;
+    height: 100px;
+    font-family: Verdana;
+    padding:20;
+    margin:0;
 }
 
 header {
