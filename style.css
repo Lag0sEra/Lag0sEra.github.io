@@ -1,63 +1,190 @@
-/* Reset some default styles */
-main {
-    max-width: 800px;
-    margin: 40px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h3 {
-      font-style: italic;
-      font-weight: bold;
-      text-align: center;
-      color: white;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fafafa;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
-h4 {
-      font-style: italic;
-      font-weight: bold;
-      text-align: center;
-      color: white;
-}
-
-body{
-    background-image: url('https://raw.githubusercontent.com/Lag0sEra/Lag0sEra.github.io/refs/heads/main/Websiteshits/BG/TransBG.gif');
-    background-size: cover;
-    height: 100px;
-    font-family: Verdana;
-    padding:20;
-    margin:0;
-}
-
+/* Header */
 header {
-  background: #007acc;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-nav ul li {
-  margin: 0 15px;
+.logo img {
+  height: 50px;
 }
 
-nav ul li a {
-    list-style: none inside;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-footer {
+nav a:hover {
+  color: #0077b6;
+}
+
+/* Dark mode toggle button */
+#theme-toggle {
+  margin-left: 25px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Hero */
+.hero {
   text-align: center;
-  margin-top: 40px;
+  padding: 100px 20px;
+  background: #f0f0f0;
+  transition: background 0.3s;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #0077b6;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Contact */
+.contact {
+  background: #f0f0f0;
+  padding: 80px 20px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.socials a {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
   color: #777;
+  transition: background 0.3s;
+}
+
+/* 🌙 Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-mode nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .hero {
+  background: #1a1a1a;
+}
+
+body.dark-mode .about,
+body.dark-mode footer {
+  background: #1e1e1e;
+}
+
+body.dark-mode .contact {
+  background: #1a1a1a;
+}
+
+body.dark-mode a {
+  color: #66b3ff;
+}
+
+body.dark-mode .grid img {
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
 }
