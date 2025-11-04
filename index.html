@@ -1,38 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Graphic Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<!--
-The head of the website, god forbid I know how to write HTML CSS.
--->
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-              <title>River's Pool of Content</title>
-  </head>
+  <header>
+    <div class="logo">
+      <img src="your-logo.png" alt="Your Logo">
+    </div>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <!-- 🌙 Dark Mode Toggle -->
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
 
-<!--
-Alright, here we go...
--->
-  
-  <body>
-                    <!--
-                    Alright, here we go... Welcome to the Website!
-                    -->
-    <h1>
-        <h3 style="text-align:center;">  Welcome to River's  </h3>
-        <h4 style="text-align:center;">  Pool of Content!  </h4>
-    </h1>
+  <section class="hero">
+    <h1>Hi, I'm <span>Your Name</span></h1>
+    <p>I’m a freelance graphic designer helping brands tell their stories through design.</p>
+  </section>
 
-    
-                    <!--
-                    Xtra Contentshits?
-                    -->
-    <ul>
-        <li>  <a href="Home">  Home  </a>  </li>
-        <li>  <a href="About">  About  </a>  </li>
-        <li>  <a href="Contact">  Contact  </a>  </li>
-    </ul>
-    
+  <section id="portfolio" class="portfolio">
+    <h2>My Work</h2>
+    <div class="grid">
+      <img src="project1.jpg" alt="Project 1">
+      <img src="project2.jpg" alt="Project 2">
+      <img src="project3.jpg" alt="Project 3">
+      <img src="project4.jpg" alt="Project 4">
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate designer with experience in branding, social media graphics,
+      and digital illustration. I love creating visuals that make an impact and help
+      businesses connect with their audience.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <p>Let’s work together! Reach out via email or connect on social media.</p>
+    <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Dribbble</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- 🌙 Dark Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Load theme preference
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const darkModeOn = body.classList.contains('dark-mode');
+      toggleBtn.textContent = darkModeOn ? '☀️' : '🌙';
+      localStorage.setItem('theme', darkModeOn ? 'dark' : 'light');
+    });
+  </script>
+</body>
 </html>
